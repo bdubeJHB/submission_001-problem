@@ -23,15 +23,19 @@ def create_outline():
     print("Student progress:")
     num = 1
     for student in students:
-        print(str(num) + ". " + student)
-        num += 1
+        print(num + ". ", end='')
+        for detail in student:
+            print(detail, end='\t')
+            num += 1
+        print()
+
 
 
 def make_student(id, all_problems, statuses):
     topics = list(all_problems.keys())
     problems = list(all_problems.values())
 
-    student = (id, topics[random.randint(0, len(topics) - 1)], problems[random.randint(0, len(problems) - 1)], statuses[random.randint(0, len(statuses))])
+    student = (id, topics[randint(0, len(topics) - 1)], problems[randint(0, len(problems) - 1)], statuses[randint(0, len(statuses))])
     return student
 
 
