@@ -23,11 +23,11 @@ def create_outline():
     print("Student progress:")
     num = 1
     for student in students:
-        print(str(num) + ". " + )
+        print(str(num) + ". " + student)
         num += 1
 
 
-def make_student(id, all_problems, statuses)
+def make_student(id, all_problems, statuses):
     topics = list(all_problems.keys())
     problems = list(all_problems.values())
 
